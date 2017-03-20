@@ -16,7 +16,7 @@
             border:1px solid #0094ff;
             min-width:960px;
             width:960px;
-            
+            margin-top:5px;
         }
         #top_span{
             /*padding-right:10px;*/
@@ -30,6 +30,13 @@
             font-weight:bold;
             color:#0094ff;
         }
+        a{
+            text-decoration:none;
+            color:#0094ff;
+        }
+        a:hover{
+            color:#ff6a00;
+        }
     </style>
 </head>
 <body>
@@ -37,15 +44,15 @@
         <div>
         </div>
     </form>--%>
-    <div id="blogPage_top" style="min-height:35px; height:35px;">
+        <div id="blogPage_top" style="min-height:35px; height:35px;">
         <span id="top_span">
-            <span >登陆</span>
-            <span >返回博客首页</span>
-            <span >退出</span>
+            <span ><a href="#">登陆</a></span>
+            <span ><a href="#">返回博客首页</a></span>
+            <span ><a href="#">退出</a></span>
         </span>
-        
     </div>
     <div id="blogPage_body">body</div>
     <div id="blogPage_bottom">bottom</div>
+    
 </body>
 </html>
