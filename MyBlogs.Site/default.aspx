@@ -10,6 +10,12 @@
         *{
             margin:0;
             padding:0;
+            list-style:none;
+            border:0;
+        }
+        #blogPage_body{
+            height:auto;
+            min-height:695px;
         }
         #blogPage_top,#blogPage_body,#blogPage_bottom{
             margin:0 auto;
@@ -17,6 +23,29 @@
             min-width:960px;
             width:960px;
             margin-top:5px;
+        }
+       
+        #body_title{
+            min-height:35px;
+            height:35px; 
+            background-color:#0094ff;
+            font-size:30px;color:#ffffff;
+            vertical-align:central;
+        }
+        #body_menu,#body_content{
+            margin:4px;
+            border:1px dashed #808080;
+            height:650px;
+            min-height:650px;
+        }
+        #body_menu{
+            float:left;
+            width:22%;
+            
+        }
+        #body_content{
+            float:right;
+            width:75%;
         }
         #top_span{
             /*padding-right:10px;*/
@@ -37,6 +66,14 @@
         a:hover{
             color:#ff6a00;
         }
+        .li_top{
+            font-size:20px;
+            background-color:#c2bfbf;
+        }
+        .li_1,.li_2{
+            padding-left:10px;
+            background-color:#dddbdb;
+        }
     </style>
 </head>
 <body>
@@ -51,8 +88,27 @@
             <span ><a href="#">退出</a></span>
         </span>
     </div>
-    <div id="blogPage_body">body</div>
-    <div id="blogPage_bottom">bottom</div>
+    <div id="blogPage_body">
+        <div id="body_title" >
+            博客后台管理
+        </div>
+        <div id="body_menu">
+            <ul>
+                <li class="li_top"><a href="javascript:void(0);" onclick="#">日志管理</a></li>
+                <li class="li_1"><a href="javascript:void(0);" onclick="#">文章分类管理</a></li>
+                <li class="li_1"><a href="javascript:void(0);" onclick="#">文章管理</a></li>
+            </ul>
+            <ul>
+                <li class="li_top"><a href="javascript:void(0);" onclick="#">相册管理</a></li>
+                <li class="li_2"><a href="javascript:void(0);" onclick="#">相册列表</a></li>
+                <li class="li_2"><a href="javascript:void(0);" onclick="#">上传照片</a></li>
+            </ul>
+        </div>
+        <div id="body_content">右</div>
+    </div>
+    <div id="blogPage_bottom" style="vertical-align:middle; color:white;font-size:20px;text-align:center;background-color:#0094ff;height:30px;">
+        版权所有
+    </div>
     
 </body>
 </html>
