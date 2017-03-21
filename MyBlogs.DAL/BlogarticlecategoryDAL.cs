@@ -291,7 +291,7 @@ namespace MyBlogs.DAL
 			return DbHelperMySQL.Query(strSql.ToString());
 		}
 
-		/*
+        /*
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
@@ -316,10 +316,20 @@ namespace MyBlogs.DAL
 			return DbHelperMySQL.RunProcedure("UP_GetRecordByPage",parameters,"ds");
 		}*/
 
-		#endregion  BasicMethod
-		#region  ExtensionMethod
-
-		#endregion  ExtensionMethod
-	}
+        #endregion  BasicMethod
+        #region  ExtensionMethod
+        public DataSet GetListExt(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append(@"SELECT bac.Id,bac.`Name`,bac.Remark,bac.`Status`,buser.CnName,buser.Id AS userId,enums.CnName as typename from blogarticlecategory as bac LEFT JOIN bloguser as buser ON (bac.AuthorId=buser.id)LEFT JOIN enumeration AS enums ON enums.Type=3 and bac.`Status`=enums.Id ");
+            //strSql.Append(" FROM blogarticlecategory ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            return DbHelperMySQL.Query(strSql.ToString());
+        }
+        #endregion  ExtensionMethod
+    }
 }
 
