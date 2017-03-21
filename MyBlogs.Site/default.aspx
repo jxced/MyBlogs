@@ -30,8 +30,17 @@
             height:35px; 
             background-color:#0094ff;
             font-size:30px;color:#ffffff;
-            vertical-align:central;
+            vertical-align:middle;
         }
+        #blogPage_bottom{
+             color:white;
+             font-size:20px;
+             text-align:center;
+             background-color:#0094ff;
+             height:30px;
+            
+        }
+       
         #body_menu,#body_content{
             margin:4px;
             border:1px dashed #808080;
@@ -74,6 +83,14 @@
             padding-left:10px;
             background-color:#dddbdb;
         }
+        #table{
+            display:table;
+            border-collapse:collapse;
+            border:2px solid #000000;
+        }
+        #table li{
+            float:right;
+        }
     </style>
 </head>
 <body>
@@ -104,10 +121,22 @@
                 <li class="li_2"><a href="javascript:void(0);" onclick="#">上传照片</a></li>
             </ul>
         </div>
-        <div id="body_content">右</div>
+        <div id="body_content">
+            <div id="table">
+                <div id="title">
+                    <ul >
+                        <li>序号</li>
+                        <li>姓名</li>
+                        <li>年龄</li>
+                        <li>备注</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
     </div>
-    <div id="blogPage_bottom" style="vertical-align:middle; color:white;font-size:20px;text-align:center;background-color:#0094ff;height:30px;">
-        版权所有
+    <div id="blogPage_bottom">
+        <span>版权所有</span>
     </div>
     
 </body>
