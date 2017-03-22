@@ -36,13 +36,14 @@
 #body_menu, #body_content {
     height: 650px;
     min-height: 650px;
+    border: 1px dashed #808080;
+    margin: 4px;
 }
 
 #body_menu {
     float: left;
     width: 22%;
-    border: 1px dashed #808080;
-    margin: 4px;
+    /*border: 1px dashed #808080;*/
     list-style: none;
 }
 

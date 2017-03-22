@@ -69,9 +69,10 @@
     <Content Include="HtmlPage1.html" />
     <Content Include="HtmlPage2.html" />
     <Content Include="packages.config" />
+    <Content Include="script\jquery-1.9.1.js" />
     <Content Include="style\defaultStyle.css" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="action\Handler1.ashx" />
+    <Content Include="action\edit.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -84,8 +85,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="action\Handler1.ashx.cs">
-      <DependentUpon>Handler1.ashx</DependentUpon>
+    <Compile Include="action\edit.ashx.cs">
+      <DependentUpon>edit.ashx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
@@ -117,6 +118,7 @@
       <Name>MyBlogs.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

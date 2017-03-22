@@ -141,7 +141,7 @@ namespace MyBlogs.DAL
 		public bool DeleteList(string Idlist )
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("delete from blogarticlecategory ");
+			strSql.Append("update blogarticlecategory set isDel=1 ");
 			strSql.Append(" where Id in ("+Idlist + ")  ");
 			int rows=DbHelperMySQL.ExecuteSql(strSql.ToString());
 			if (rows > 0)

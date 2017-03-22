@@ -39,8 +39,9 @@ namespace MyBlogs.Site
                     foreach (DataRow row in ds.Rows)
                     {
                         sb.Append("<ul class=\"table-row\">");
-                        sb.Append("<li class=\"table-cell\"><input type = \"checkbox\" /></li>");
+                        sb.Append("<li class=\"table-cell\"><input type = \"checkbox\" name=\"chk\" value='"+row["Id"]+"' /></li>");
                         sb.Append("<li class=\"table-cell\">" + row["Id"] + "</li>");
+                        sb.Append("<li class=\"table-cell\">" + row["CnName"] + "</li>");
                         sb.Append("<li class=\"table-cell\">" + row["Name"] + "</li>");
                         sb.Append("<li class=\"table-cell\">" + row["Remark"] + "</li>");
                         sb.Append("<li class=\"table-cell\">" + row["typename"] + "</li>");
@@ -53,7 +54,11 @@ namespace MyBlogs.Site
             }
             if (method=="post")
             {
-                sb.Append("<div style='width:200px;height:200px;position:absolute;left:200px;top:200px;'></div>");
+                string s= Request.Form["chk"];
+                if (!string.IsNullOrEmpty(s))
+                {
+                    articlecategoryBLL.DeleteList(s);
+                }
             }
         }
     }

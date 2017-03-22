@@ -8,6 +8,17 @@
     <title></title>
     <link href="/style/tableStyle.css" rel="stylesheet" />
     <link href="style/defaultStyle.css" rel="stylesheet" />
+    <script src="/script/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#chkAll").click(function () {
+                var isChk = this.checked;
+                $("input[name='chk']").each(function () {
+                    this.checked = isChk;
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <%--<form id="form1" runat="server">
@@ -38,15 +49,16 @@
             </ul>
         </div>
         <div id="body_content">
-            <form action="#" method="post">
+            <form action="/default.aspx" method="post">
                 <div id="operate">
-                    <input type="button" value="新增" onclick="" "/>
+                    <input type="button" value="新增" onclick="" />
                     <input type="submit" value="批量删除" />
                 </div>
                 <div class="table">
                     <div class="table-column-group">
                         <div class="table-column" style="width: 45px;"></div>
                         <div class="table-column" style="width: 45px;"></div>
+                        <div class="table-column"></div>
                         <div class="table-column"></div>
                         <div class="table-column" style="width: 150px;"></div>
                         <div class="table-column"></div>
@@ -55,8 +67,9 @@
                     <div class="table-header-group">
                         <ul class="table-row">
                             <li class="table-cell">
-                                <input type="checkbox" /></li>
+                                <input id="chkAll" type="checkbox" name="chkAll" value="全选"  /></li>
                             <li class="table-cell">序号</li>
+                            <li class="table-cell">作者</li>
                             <li class="table-cell">分类名称</li>
                             <li class="table-cell">备注</li>
                             <li class="table-cell">状态</li>
