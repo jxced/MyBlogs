@@ -45,7 +45,7 @@ namespace MyBlogs.Site
                         sb.Append("<li class=\"table-cell\">" + row["Name"] + "</li>");
                         sb.Append("<li class=\"table-cell\">" + row["Remark"] + "</li>");
                         sb.Append("<li class=\"table-cell\">" + row["typename"] + "</li>");
-                        sb.Append("<li class=\"table-cell\"><a href='javascript: void(0);' onclick='#'>编辑</a>|<a href='javascript: void(0);' onclick='#'>删除</a></li>");
+                        sb.Append("<li class=\"table-cell\"><a href='javascript: void(0);' onclick='edit("+row["Id"]+ ")'>编辑</a>|<a href='javascript: void(0);' onclick='del(" + row["Id"] + ")'>删除</a></li>");
                         sb.Append("</ul>");
                     }
                     sb.Append("</div>");

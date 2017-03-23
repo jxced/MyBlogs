@@ -18,6 +18,9 @@
                 });
             });
         });
+        function hidd(className) {
+            $(className).toggle();
+        }
     </script>
 </head>
 <body>
@@ -38,12 +41,12 @@
         </div>
         <div id="body_menu">
             <ul>
-                <li class="li_top"><a href="javascript:void(0);" onclick="#">日志管理</a></li>
+                <li class="li_top"><a href="javascript:void(0);" onclick="hidd('.li_1')">日志管理</a></li>
                 <li class="li_1"><a href="javascript:void(0);" onclick="#">文章分类管理</a></li>
                 <li class="li_1"><a href="javascript:void(0);" onclick="#">文章管理</a></li>
             </ul>
             <ul>
-                <li class="li_top"><a href="javascript:void(0);" onclick="#">相册管理</a></li>
+                <li class="li_top"><a href="javascript:void(0);" onclick="hidd('.li_2')">相册管理</a></li>
                 <li class="li_2"><a href="javascript:void(0);" onclick="#">相册列表</a></li>
                 <li class="li_2"><a href="javascript:void(0);" onclick="#">上传照片</a></li>
             </ul>
@@ -67,7 +70,7 @@
                     <div class="table-header-group">
                         <ul class="table-row">
                             <li class="table-cell">
-                                <input id="chkAll" type="checkbox" name="chkAll" value="全选"  /></li>
+                                <input id="chkAll" type="checkbox" name="chkAll"  /></li>
                             <li class="table-cell">序号</li>
                             <li class="table-cell">作者</li>
                             <li class="table-cell">分类名称</li>
