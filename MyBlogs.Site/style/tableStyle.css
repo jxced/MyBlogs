@@ -1,9 +1,9 @@
-﻿.table {
+﻿.table, .editTable {
     display: table;
     border-collapse: collapse;
     border: 1px solid #ccc;
-    text-align:center;
-    list-style:none;
+    text-align: center;
+    list-style: none;
 }
 
 .table-caption {

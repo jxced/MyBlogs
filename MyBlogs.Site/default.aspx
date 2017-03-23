@@ -10,6 +10,7 @@
     <link href="style/defaultStyle.css" rel="stylesheet" />
     <script src="/script/jquery-1.9.1.js"></script>
     <script type="text/javascript">
+        XMLHttpRequest
         $(function () {
             $("#chkAll").click(function () {
                 var isChk = this.checked;
@@ -20,6 +21,9 @@
         });
         function hidd(className) {
             $(className).toggle();
+        }
+        function edit() {
+
         }
     </script>
 </head>
@@ -53,9 +57,26 @@
         </div>
         <div id="body_content">
             <form action="/default.aspx" method="post">
-                <div id="editTable" hidden="hidden">
-
-
+                <div id="editTable" hidden="hidden" style="position:absolute;left:300px;right:400px;">
+                    <div class="table-column-group">
+                        <div class="table-column" style="width: 45px;"></div>
+                        <div class="table-column" style="width: 45px;"></div>
+                        <div class="table-column"></div>
+                        <div class="table-column"></div>
+                        <div class="table-column" style="width: 150px;"></div>
+                        <div class="table-column"></div>
+                        <div class="table-column"></div>
+                    </div>
+                    <div class="table-header-group">
+                        <ul class="table-row">
+                            <li class="table-cell">
+                            <li class="table-cell">序号</li>
+                            <li class="table-cell">作者</li>
+                            <li class="table-cell">分类名称</li>
+                            <li class="table-cell">备注</li>
+                            <li class="table-cell">状态</li>
+                        </ul>
+                    </div>
                 </div>
                 <div id="operate">
                     <input type="button" value="新增" onclick="" />

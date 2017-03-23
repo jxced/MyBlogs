@@ -9,9 +9,10 @@ namespace MyBlogs.Site
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        public string M { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
+            M = "4";
+    }
     }
 }

@@ -11,6 +11,8 @@
     <form id="form1" runat="server">
         <div>
             <input type="button" value="提交"/>
+            <span>name:<%=M %></span>
+            <span>name:<%Response.Write(M + "s");%></span>
         </div>
     </form>
 </body>

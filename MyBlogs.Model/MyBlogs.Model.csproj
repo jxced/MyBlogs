@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Blogarticle.cs" />
     <Compile Include="Blogarticlecategory.cs" />
+    <Compile Include="Blogarticlecategory_Exp.cs" />
     <Compile Include="Blogcommentarticle.cs" />
     <Compile Include="Blogcommentphoto.cs" />
     <Compile Include="Blogphoto.cs" />

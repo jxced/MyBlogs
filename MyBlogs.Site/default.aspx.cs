@@ -41,11 +41,11 @@ namespace MyBlogs.Site
                         sb.Append("<ul class=\"table-row\">");
                         sb.Append("<li class=\"table-cell\"><input type = \"checkbox\" name=\"chk\" value='"+row["Id"]+"' /></li>");
                         sb.Append("<li class=\"table-cell\">" + row["Id"] + "</li>");
-                        sb.Append("<li class=\"table-cell\">" + row["CnName"] + "</li>");
-                        sb.Append("<li class=\"table-cell\">" + row["Name"] + "</li>");
+                        sb.Append("<li class=\"table-cell\">" + row["CnName"] + "</li>");//作者
+                        sb.Append("<li class=\"table-cell\">" + row["Name"] + "</li>");//分类
                         sb.Append("<li class=\"table-cell\">" + row["Remark"] + "</li>");
                         sb.Append("<li class=\"table-cell\">" + row["typename"] + "</li>");
-                        sb.Append("<li class=\"table-cell\"><a href='javascript: void(0);' onclick='edit("+row["Id"]+ ")'>编辑</a>|<a href='javascript: void(0);' onclick='del(" + row["Id"] + ")'>删除</a></li>");
+                        sb.Append("<li class=\"table-cell\"><a href='javascript: void(0);' onclick='edit("+ row["Id"] +','+ row["CnName"] + ',' + row["Name"] + ',' + row["Remark"] + ',' + row["typename"]+ ',' + row["Status"]+ ")'>编辑</a>|<a href='javascript: void(0);' onclick='del(" + row["Id"] + ")'>删除</a></li>");
                         sb.Append("</ul>");
                     }
                     sb.Append("</div>");
@@ -58,7 +58,9 @@ namespace MyBlogs.Site
                 if (!string.IsNullOrEmpty(s))
                 {
                     articlecategoryBLL.DeleteList(s);
+                    
                 }
+                Response.Redirect("default.aspx");
             }
         }
     }
