@@ -53,6 +53,10 @@
         </div>
         <div id="body_content">
             <form action="/default.aspx" method="post">
+                <div id="editTable" hidden="hidden">
+
+
+                </div>
                 <div id="operate">
                     <input type="button" value="新增" onclick="" />
                     <input type="submit" value="批量删除" />
