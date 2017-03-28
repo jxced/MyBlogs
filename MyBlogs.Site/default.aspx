@@ -10,7 +10,9 @@
     <link href="style/defaultStyle.css" rel="stylesheet" />
     <script src="/script/jquery-1.9.1.js"></script>
     <script type="text/javascript">
-       
+        var xhr = new XMLHttpRequest();
+        xhr.open()
+        $.ajax()
         $(function () {
             $("#chkAll").click(function () {
                 var isChk = this.checked;

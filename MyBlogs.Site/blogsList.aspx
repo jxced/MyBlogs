@@ -14,9 +14,12 @@
         function hidd(className) {
             $(className).toggle();
         }
-        function edit() {
-
-        }
+        $(function edit() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("get", "loadList.ashx", true);
+            xhr.onreadystatechange();
+            xhr.send(null);
+        })
     </script>
     
 </asp:Content>
@@ -69,7 +72,9 @@
                             <li class="table-cell">操作</li>
                         </ul>
                     </div>
-                    
+                    <div id="t">
+                        <a href="javascript:void(0);" onclick="/">点击</a>
+                    </div>
                     <%-- <div class="table-footer-group">
                     <ul class="table-row">
                         <li class="table-cell">备注</li>
