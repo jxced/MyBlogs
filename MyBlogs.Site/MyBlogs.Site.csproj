@@ -71,15 +71,18 @@
     <Content Include="HtmlPage2.html" />
     <Content Include="packages.config" />
     <Content Include="master\blogs.Master" />
+    <Content Include="actions\baseAshx.ashx" />
+    <Content Include="actions\articleHandler.ashx" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\tmpl.js" />
     <Content Include="script\jquery-1.9.1.js" />
     <Content Include="style\defaultStyle.css" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="action\edit.ashx" />
+    <Content Include="actions\edit.ashx" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <None Include="Web.Debug.config">
@@ -94,7 +97,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="action\edit.ashx.cs">
+    <Compile Include="actions\articleHandler.ashx.cs">
+      <DependentUpon>articleHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="actions\baseAshx.ashx.cs">
+      <DependentUpon>baseAshx.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="actions\edit.ashx.cs">
       <DependentUpon>edit.ashx</DependentUpon>
     </Compile>
     <Compile Include="blogsList.aspx.cs">

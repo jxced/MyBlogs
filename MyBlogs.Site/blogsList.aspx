@@ -14,12 +14,15 @@
         function hidd(className) {
             $(className).toggle();
         }
-        $(function edit() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("get", "loadList.ashx", true);
-            xhr.onreadystatechange();
-            xhr.send(null);
-        })
+        //$(function edit() {
+        //    var xhr = new XMLHttpRequest();
+        //    xhr.open("get", "articleHandler.ashx?type=loadList", true);
+        //    xhr.onreadystatechange = function () {
+
+        //    };
+        //    xhr.send(null);
+        //    $.get("", function () { }, JSON);
+        //})
     </script>
     
 </asp:Content>
@@ -72,9 +75,14 @@
                             <li class="table-cell">操作</li>
                         </ul>
                     </div>
-                    <div id="t">
-                        <a href="javascript:void(0);" onclick="/">点击</a>
-                    </div>
+                    <script  type="text/javascript">
+                        $(function () {
+                            $.getJSON("/actions/articleHandler.ashx?type=loadList", function (jsObj) {
+                                var obj= JSON.parse(jsObj);
+                            });
+                        })
+
+                    </script>
                     <%-- <div class="table-footer-group">
                     <ul class="table-row">
                         <li class="table-cell">备注</li>
