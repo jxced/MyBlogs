@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="BlogarticlecategoryDAL.cs" />
     <Compile Include="BlogarticleDAL.cs" />
+    <Compile Include="BlogarticleDAL_Exp.cs" />
     <Compile Include="BlogcommentarticleDAL.cs" />
     <Compile Include="BlogcommentphotoDAL.cs" />
     <Compile Include="BlogphotoalblumDAL.cs" />

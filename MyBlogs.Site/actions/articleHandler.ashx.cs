@@ -88,7 +88,7 @@ namespace MyBlogs.Site.actions
                 {
                     Status = statusEN.success.ToString(),
                     Msg = "加载成功",
-                    Datas = artB.(" IsDel=0 ")
+                    Datas = artB.GetModelList(" IsDel=0 ")
                 };
             }
             string jsonStr = Kits.JsSerializer(obj);
