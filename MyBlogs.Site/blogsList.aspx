@@ -79,7 +79,9 @@
                         $(function () {
                             $.getJSON("/actions/articleHandler.ashx?type=loadList", function (jsObj) {
                                 var obj = JSON.parse(jsObj);
-                                obj.Datas
+                                $.each(obj.Datas, function () {
+                                    
+                                });
                             });
                         })
 
