@@ -5,6 +5,7 @@ using System.Web;
 using MyBlogs.BLL;
 using MyBlogs.Model;
 using MyBlogs.Common;
+using System.Data;
 
 namespace MyBlogs.Site.actions
 {
@@ -84,15 +85,37 @@ namespace MyBlogs.Site.actions
             }
             else if (en == statusEN.success)
             {
+                
                 obj = new AJAXObj()
                 {
                     Status = statusEN.success.ToString(),
                     Msg = "加载成功",
-                    Datas = artB.GetModelList(" IsDel=0 ")
-                };
+                    Datas = GetModelList()
+            };
             }
             string jsonStr = Kits.JsSerializer(obj);
             Response.Write(jsonStr);
+        }
+
+        private List<Blogarticle> GetModelList()
+        {
+            DataTable tb = artB.GetList_Exp(" a.IsDel=0 ").Tables[0];
+            List<Blogarticle> entitys = new List<Blogarticle>();
+            if (tb.Rows.Count<=0)
+            {
+                return null;
+            }
+            foreach (DataRow row in tb.Rows)
+            {
+                Blogarticle entity = new Blogarticle()
+                {
+                    Id=int.Parse( row["Id"].ToString()),
+                    AuthorId=int.Parse(row["AuthorId"].ToString()),
+                    Status=int.Parse(row["Status"].ToString())
+                };
+                entitys.Add(entity);
+            }
+            return  entitys;
         }
 
         //public bool IsReusable

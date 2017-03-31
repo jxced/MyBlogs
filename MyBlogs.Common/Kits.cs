@@ -18,6 +18,17 @@ namespace MyBlogs.Common
             System.Web.Script.Serialization.JavaScriptSerializer jsSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             return jsSerializer.Serialize(obj);
         }
+        public static bool IsInt(string id)
+        {
+            int result = -1;
+            if (string.IsNullOrEmpty(id))
+            {
+                return false;
+            }
+           return int.TryParse(id, out result);
+
+        }
+            
 
     }
 

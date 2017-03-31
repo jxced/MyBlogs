@@ -11,8 +11,8 @@ namespace MyBlogs.DAL
         public DataSet GetList_Exp(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select Id,CategoryId,AuthorId,Content,ImgSrc,CommentNum,AllowComment,IsTop,Tag,CickNum,Status,AddTime,UpdateTime,IsDel,HtmlSrc ");
-            strSql.Append(" FROM blogarticle ");
+            strSql.Append("SELECT a.*,ac.`Name`,u.CnName,e.Type,e.CnName AS statusName FROM blogarticle as a	left JOIN blogarticlecategory as ac on a.CategoryId=ac.Id LEFT JOIN bloguser as u ON u.Id=a.AuthorId LEFT JOIN enumeration as e ON e.Id=a.`Status`");
+            //strSql.Append("");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);

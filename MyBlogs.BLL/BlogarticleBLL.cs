@@ -165,7 +165,10 @@ namespace MyBlogs.BLL
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-
+        public DataSet GetList_Exp(string strWhere)
+        {
+            return dal.GetList_Exp(strWhere);
+        }
 		#endregion  ExtensionMethod
 	}
 }
