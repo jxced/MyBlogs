@@ -43,6 +43,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxMin, Version=4.60.4609.17023, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.4.60.4609.17023\lib\net20\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Cassette, Version=2.0.0.17974, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cassette.2.0.0\lib\net40-client\Cassette.dll</HintPath>
+    </Reference>
+    <Reference Include="Cassette.JQueryTmpl, Version=2.0.0.17974, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cassette.JQueryTmpl.2.0.0\lib\net40-client\Cassette.JQueryTmpl.dll</HintPath>
+    </Reference>
+    <Reference Include="Cassette.KnockoutJQueryTmpl, Version=2.0.0.17974, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cassette.KnockoutJQueryTmpl.2.0.0\lib\net40-client\Cassette.KnockoutJQueryTmpl.dll</HintPath>
+    </Reference>
+    <Reference Include="Jurassic, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jurassic.2.1.0\lib\net40\Jurassic.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -78,7 +93,6 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
-    <Content Include="Scripts\tmpl.js" />
     <Content Include="script\jquery-1.9.1.js" />
     <Content Include="style\defaultStyle.css" />
     <Content Include="WebForm1.aspx" />
