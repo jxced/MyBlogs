@@ -1,10 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/blogs.Master" AutoEventWireup="true" CodeBehind="blogsList.aspx.cs" Inherits="MyBlogs.Site.blogsList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="/script/jquery-1.9.1.js"></script>
-    <script type="text/x-jsrender">
-
-    </script>
-    <script type="text/javascript">
+    <script src="/Scripts/jquery-1.9.1.js"></script>
+    <script src="/Scripts/jquery.tmpl.min.js"></script>
+    <script async="async" type="text/javascript">
         $(function () {
             $("#chkAll").click(function () {
                 var isChk = this.checked;
@@ -16,17 +14,17 @@
         function hidd(className) {
             $(className).toggle();
         }
-        //$(function () {
-        //    $.getJSON("/actions/articleHandler.ashx?type=loadList", function (jsObj) {
-        //        var obj = JSON.parse(jsObj);
-        //        var datas = obj.Datas;
-        //        $("#template-divTable").tmpl(datas).appendTo(".table");
-        //    });
-        //})
         $(function () {
-            var datas = [{ id: 1, name: "w" }, { id: 1, name: "w" }, { id: 1, name: "w" }, { id: 1, name: "w" }, { id: 1, name: "w" }];
-            $("#template-divTable").tmpl(datas).appendTo(".table");
+            $.getJSON("/actions/articleHandler.ashx?type=loadList", function (jsObj) {
+                //var obj = JSON.parse(jsObj);
+                var datas = jsObj.Datas;
+                $("#template-divTable").tmpl(datas).appendTo(".table");
+            });
         })
+        //$(function () {
+        //    var datas = [{ Id: 1, name: "w" }, { Id: 2, name: "w" }, { Id: 1, name: "w" }, { Id: 1, name: "w" }, { Id: 1, name: "w" }];
+        //    $("#template-divTable").tmpl(datas).appendTo(".table");
+        //})
         //$(function edit() {
         //    var xhr = new XMLHttpRequest();
         //    xhr.open("get", "articleHandler.ashx?type=loadList", true);
@@ -37,21 +35,20 @@
         //    $.get("", function () { }, JSON);
         //})
     </script>
-    <script type="text/x-jsrender"></script>
     <script id="template-divTable" type="text/x-jquery-tmpl">
         <div class="table-row-group">
                     <ul class="table-row">
                         <li class="table-cell">
-                            <input type="checkbox" /></li>
+                            <input type="checkbox" name="chk" /></li>
                         <li class="table-cell">${Id}</li>
                         <li class="table-cell">${Id}</li>
                         <li class="table-cell">${Id}</li>
                         <li class="table-cell">${Id}</li>
                         <li class="table-cell">${Id}</li>
+                        <li class="table-cell"><a>编辑</a>|<a>删除</a></li>
                     </ul>
         </div>
     </script>
-    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
                 <form action="/default.aspx" method="post">
