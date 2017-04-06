@@ -14,9 +14,16 @@
             margin:0 auto;
         }
     </style>
+    <script type="text/javascript">
+        onload= (function () {
+            var date = Math.random();
+            document.getElementById("spanid").innerHTML = "<img src=\"/img/1.jpg?id="+date+"\"/>";
+        })
+    </script>
 </head>
 
 <body>
+    <span id="spanid"></span>
     <div hidden="hidden"style="position:absolute;left:200px;top:200px;"><input type="button" value="提交"/></div>
 </body>
 </html> 
