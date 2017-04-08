@@ -25,7 +25,7 @@
         <div id="body_menu">
             <ul>
                 <li class="li_top"><a href="javascript:void(0);" onclick="hidd('.li_1')">日志管理</a></li>
-                <li class="li_1"><a href="javascript:void(0);" onclick="#">文章分类管理</a></li>
+                <li class="li_1"><a href="javascript:void(0);" onclick="loadCategory()">文章分类管理</a></li>
                 <li class="li_1"><a href="javascript:void(0);" onclick="#">文章管理</a></li>
             </ul>
             <ul>
