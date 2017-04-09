@@ -77,6 +77,7 @@
     <Content Include="HtmlPage1.html" />
     <Content Include="HtmlPage2.html" />
     <Content Include="img\1.jpg" />
+    <Content Include="login.aspx" />
     <Content Include="master\blogs.Master" />
     <Content Include="actions\baseAshx.ashx" />
     <Content Include="actions\articleHandler.ashx" />
@@ -124,6 +125,13 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="master\blogs.Master.cs">
       <DependentUpon>blogs.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,9 +162,7 @@
       <Name>MyBlogs.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
