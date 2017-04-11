@@ -1,0 +1,13 @@
+﻿<div class="item item-fore1">
+	<label for="loginname" class="login-label name-label"></label>
+	<input id="loginname" type="text" class="itxt" name="loginname" tabindex="1" autocomplete="off" placeholder="邮箱/用户名/已验证手机">
+	<span class="clear-btn" style="display: inline;"></span>
+</div>
+
+
+<div id="entry" class="item item-fore2" style="visibility: visible;">
+	<label class="login-label pwd-label" for="nloginpwd"></label>
+	<input type="password" id="nloginpwd" name="nloginpwd" class="itxt itxt-error" tabindex="2" autocomplete="off" placeholder="密码">
+	<span class="clear-btn" style="display: inline;"></span>
+	<span class="capslock" style="display: none;"><b></b>大小写锁定已打开</span>
+</div>

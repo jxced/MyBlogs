@@ -74,6 +74,7 @@
   <ItemGroup>
     <Content Include="blogsList.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="Doc\test.txt" />
     <Content Include="HtmlPage1.html" />
     <Content Include="HtmlPage2.html" />
     <Content Include="img\1.jpg" />
